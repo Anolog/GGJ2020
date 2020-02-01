@@ -66,6 +66,7 @@ public class GameManager : MonoBehaviour
         m_TopUIManager.UpdateHappinessText(m_CurrentHappiness);
         m_TopUIManager.UpdatePopulationText(m_CurrentPopulation);
         m_TopUIManager.UpdateTemperatureText(m_CurrentGlobalTemperature);
+        m_TopUIManager.UpdateYearText(m_CurrentYear);
     }
 
     public void IncreaseCurrentYear()
