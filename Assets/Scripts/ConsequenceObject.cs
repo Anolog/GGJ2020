@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ConsequenceObject : MonoBehaviour
+[CreateAssetMenu(fileName = "ConsequenceObject", menuName = "Consequence")]
+public class ConsequenceObject : ScriptableObject
 {
     public string m_ConsequenceText = "";
     public float m_TempEffect = 0;

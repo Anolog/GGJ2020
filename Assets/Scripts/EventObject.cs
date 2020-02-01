@@ -2,23 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EventObject : MonoBehaviour
+[CreateAssetMenu(fileName = "EventObject", menuName = "Event")]
+public class EventObject : ScriptableObject
 {
     public List<ChoiceObject> m_ChoicesFromEvent = new List<ChoiceObject>();
 
     public string m_EventText = "";
 
-    // Placeholder Image variable
+    public Sprite m_EventImage;
 
-	// Use this for initialization
-	void Start ()
-    {
-		
-	}
-	
-	// Update is called once per frame
-	void Update ()
-    {
-		
-	}
 }
