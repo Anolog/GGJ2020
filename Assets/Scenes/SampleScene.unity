@@ -618,6 +618,7 @@ MonoBehaviour:
   m_CurrentYear: 0
   m_EventList:
   - {fileID: 11400000, guid: c9e5b30e9d08c4fe3b2527db52d4b3b0, type: 2}
+  m_CurrentEvent: {fileID: 0}
   m_CurrentGlobalTemperature: 1.15
   m_CurrentPopulation: 7800000000
   m_CurrentHappiness: 50
@@ -655,6 +656,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aee49c07e023b4bfa8acfa67f0e0c83e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_GameManagerRef: {fileID: 637007934}
   m_Dialogue: {fileID: 1732824014}
 --- !u!1 &874444918
 GameObject:

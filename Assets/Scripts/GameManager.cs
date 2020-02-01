@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     public int m_TurnCounter = 0;
 
     public int m_CurrentYear = 0;
-    const int INITIAL_YEAR = 2020;
+    const int INITIAL_YEAR = 2019;
     const int FINAL_YEAR = 2030;
 
     public List<EventObject> m_EventList = new List<EventObject>();
@@ -34,6 +34,9 @@ public class GameManager : MonoBehaviour
 
     public Button[] m_ChoiceButtons = new Button[4];
 
+    public bool m_bIsChoiceBeingShown = false;
+    public bool m_bIsConsequenceBeingShown = false;
+
     // Use this for initialization
 	void Start ()
     {
@@ -41,7 +44,7 @@ public class GameManager : MonoBehaviour
 
         m_CurrentYear = INITIAL_YEAR;
 
-
+        SetUpTurn(m_EventList[0]);
 	}
 	
 	// Update is called once per frame
@@ -50,8 +53,6 @@ public class GameManager : MonoBehaviour
 		if (Input.GetKeyUp(KeyCode.Space) && m_bIsTextBeingShown == true)
         {
             m_DialogueManager.DisplayNextSentence();
-
-
         }
 	}
 
@@ -121,22 +122,17 @@ public class GameManager : MonoBehaviour
 
         SetAllButtonsEnabled(false);
         m_DialogueManager.StartDialogue(aEvent.m_EventText);
-
+        m_bIsTextBeingShown = true;
+        m_bIsChoiceBeingShown = true;
+        m_bIsConsequenceBeingShown = false;
         //Create some sort of logic to put in random events into spots that don't have any
-
-        List<ChoiceObject> choices = aEvent.m_ChoicesFromEvent;
-
-        EnableAmountOfChoices(choices.Count);
-
-        for (int i = 0; i < choices.Count; i++)
-        {
-            m_ChoiceButtons[i].GetComponent<Text>().text = choices[i].m_ChoiceText;
-        }
 
     }
 
     public void OnChoicePressed(int aButtonID)
     {
+        m_bIsChoiceBeingShown = false;
+
         List<ConsequenceObject> consequences = m_CurrentEvent.m_ChoicesFromEvent[aButtonID].m_Consequences;
 
         int randomConsequence = Random.Range(0, consequences.Count);
@@ -150,6 +146,8 @@ public class GameManager : MonoBehaviour
     public void ProcessConsequence(ConsequenceObject aConsequence)
     {
         SetAllButtonsEnabled(false);
+        m_bIsConsequenceBeingShown = true;
+        m_bIsTextBeingShown = true;
         m_DialogueManager.StartDialogue(aConsequence.m_ConsequenceText);
 
         m_CurrentGlobalTemperature += aConsequence.m_TempEffect;
@@ -176,6 +174,28 @@ public class GameManager : MonoBehaviour
         if (m_CurrentHappiness <= 100)
         {
             m_CurrentHappiness = 100;
+        }
+    }
+
+    public void OnDialogEnded()
+    {
+        m_bIsTextBeingShown = false;
+
+        if (m_bIsConsequenceBeingShown)
+        {
+
+        }
+
+        if (m_bIsChoiceBeingShown)
+        {
+            List<ChoiceObject> choices = m_CurrentEvent.m_ChoicesFromEvent;
+
+            EnableAmountOfChoices(choices.Count);
+
+            for (int i = 0; i < choices.Count; i++)
+            {
+                m_ChoiceButtons[i].GetComponentInChildren<Text>().text = choices[i].m_ChoiceText;
+            }
         }
     }
 }

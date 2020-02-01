@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class DIalogueManager : MonoBehaviour
 {
+    public GameManager m_GameManagerRef;
+
     public Queue<string> m_SentenceQueue;
 
     public Text m_Dialogue;
@@ -42,5 +44,7 @@ public class DIalogueManager : MonoBehaviour
     public void EndDialogue()
     {
         m_Dialogue.text = "";
+
+        m_GameManagerRef.OnDialogEnded();
     }
 }

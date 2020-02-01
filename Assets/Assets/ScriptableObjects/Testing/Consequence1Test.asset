@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Name: Consequence1Test
   m_EditorClassIdentifier: 
   m_ConsequenceText:
-  - 
+  - Test Consequence1  Text 1 THis is the first paragraph for the consequence
+  - Test Consequence 1 Text 2 this is the second paragraph for the consequence
   m_TempEffect: -0.75
   m_PopulationEffect: 50000
   m_HappinessEffect: -20
