@@ -55,7 +55,7 @@ public class GameManager : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-		if (Input.GetKeyUp(KeyCode.Space) && m_bIsTextBeingShown == true)
+		if ((Input.GetKeyUp(KeyCode.Space) || Input.GetMouseButtonUp(0))&& m_bIsTextBeingShown == true)
         {
             m_DialogueManager.DisplayNextSentence();
         }

@@ -19,6 +19,11 @@ public class DIalogueManager : MonoBehaviour
 
     public void StartDialogue(List<string> aDialogue)
     {
+        if (m_SentenceQueue == null)
+        {
+            m_SentenceQueue = new Queue<string>();
+        }
+
         m_SentenceQueue.Clear();
 
         foreach (string sentence in aDialogue)
