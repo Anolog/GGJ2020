@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -20,19 +21,38 @@ public class GameManager : MonoBehaviour
     const int MAX_HAPPINESS = 100;
     const int MIN_HAPPINESS = 0;
     const int MIN_POPULATION = 0;
+
+    public DIalogueManager m_DialogueManager;
+
+    public Canvas m_TextBoxCanvas;
+    public Text m_TextBoxText;
+
+    public List<string> TEST_TEXT = new List<string>();
     
 
     // Use this for initialization
 	void Start ()
     {
         m_CurrentYear = INITIAL_YEAR;
-        ProcessEvent();
+        //ProcessEvent();
+
+        for (int i = 0; i < 10; i++)
+        {
+            int randomTextAmount = Random.Range(0, 40);
+
+            TEST_TEXT.Add("TEST TEXT MESSAGE:  " + i + " - HASH CODE FOR SPACE " + randomTextAmount.GetHashCode().ToString());
+        }
+
+        m_DialogueManager.StartDialogue(TEST_TEXT);
 	}
 	
 	// Update is called once per frame
 	void Update ()
     {
-		
+		if (Input.GetKeyUp(KeyCode.Space))
+        {
+            m_DialogueManager.DisplayNextSentence();
+        }
 	}
 
     public void IncreaseCurrentYear()
