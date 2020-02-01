@@ -6,7 +6,7 @@ using UnityEngine;
 public class ChoiceObject : ScriptableObject
 {
     [TextArea(3, 10)]
-    public List<string> m_ChoiceText = new List<string>();
+    public string m_ChoiceText;
 
     public List<ConsequenceObject> m_Consequences;
 }

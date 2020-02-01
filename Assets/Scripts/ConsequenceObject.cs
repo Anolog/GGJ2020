@@ -9,6 +9,6 @@ public class ConsequenceObject : ScriptableObject
     public List<string> m_ConsequenceText;
 
     public float m_TempEffect = 0;
-    public int m_PopulationEffect = 0;
+    public long m_PopulationEffect = 0;
     public int m_HappinessEffect = 0;
 }

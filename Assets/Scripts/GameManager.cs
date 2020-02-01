@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     const int FINAL_YEAR = 2030;
 
     public List<EventObject> m_EventList = new List<EventObject>();
+    public EventObject m_CurrentEvent;
 
     public float m_CurrentGlobalTemperature = 1.15f;
     public long m_CurrentPopulation = 7800000000;
@@ -39,14 +40,7 @@ public class GameManager : MonoBehaviour
         SetAllButtonsEnabled(false);
 
         m_CurrentYear = INITIAL_YEAR;
-        //ProcessEvent();
 
-        for (int i = 0; i < 10; i++)
-        {
-            int randomTextAmount = Random.Range(0, 40);
-
-            TEST_TEXT.Add("TEST TEXT MESSAGE:  " + i + " - HASH CODE FOR SPACE " + randomTextAmount.GetHashCode().ToString());
-        }
 
 	}
 	
@@ -119,8 +113,69 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void SetChoices()
+    public void SetUpTurn(EventObject aEvent)
     {
-        
+        IncreaseCurrentYear();
+
+        m_CurrentEvent = aEvent;
+
+        SetAllButtonsEnabled(false);
+        m_DialogueManager.StartDialogue(aEvent.m_EventText);
+
+        //Create some sort of logic to put in random events into spots that don't have any
+
+        List<ChoiceObject> choices = aEvent.m_ChoicesFromEvent;
+
+        EnableAmountOfChoices(choices.Count);
+
+        for (int i = 0; i < choices.Count; i++)
+        {
+            m_ChoiceButtons[i].GetComponent<Text>().text = choices[i].m_ChoiceText;
+        }
+
+    }
+
+    public void OnChoicePressed(int aButtonID)
+    {
+        List<ConsequenceObject> consequences = m_CurrentEvent.m_ChoicesFromEvent[aButtonID].m_Consequences;
+
+        int randomConsequence = Random.Range(0, consequences.Count);
+
+        ConsequenceObject consequence = consequences[randomConsequence];
+
+        ProcessConsequence(consequence);
+
+    }
+
+    public void ProcessConsequence(ConsequenceObject aConsequence)
+    {
+        SetAllButtonsEnabled(false);
+        m_DialogueManager.StartDialogue(aConsequence.m_ConsequenceText);
+
+        m_CurrentGlobalTemperature += aConsequence.m_TempEffect;
+
+        if (m_CurrentGlobalTemperature <= 5.0f)
+        {
+            m_CurrentGlobalTemperature = 5.0f;
+        }
+
+        m_CurrentPopulation += aConsequence.m_PopulationEffect;
+
+        if (m_CurrentPopulation >= 0)
+        {
+            m_CurrentPopulation = 0;
+        }
+
+        m_CurrentHappiness += aConsequence.m_HappinessEffect;
+
+        if (m_CurrentHappiness >= 0)
+        {
+            m_CurrentHappiness = 0;
+        }
+
+        if (m_CurrentHappiness <= 100)
+        {
+            m_CurrentHappiness = 100;
+        }
     }
 }
