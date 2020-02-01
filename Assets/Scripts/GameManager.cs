@@ -62,31 +62,6 @@ public class GameManager : MonoBehaviour
         m_CurrentYear += m_TurnCounter;
     }
 
-    public void ProcessEventTest()
-    {
-        //Change this to effect the UI later instead of just the debug for now
-
-        int randomIndex = Random.Range(0, m_EventList.Count -1);
-
-        EventObject randomEvent = m_EventList[randomIndex];
-
-        Debug.Log(randomEvent.m_EventText);
-        Debug.Log("Choices are: ");
-
-        for (int i = 0; i < randomEvent.m_ChoicesFromEvent.Count; i++)
-        {
-            Debug.Log(randomEvent.m_ChoicesFromEvent[i].m_ChoiceText);
-
-            for (int k = 0; k < randomEvent.m_ChoicesFromEvent[i].m_Consequences.Count; k++)
-            {
-                Debug.Log("Consequences for choice are: ");
-                Debug.Log(randomEvent.m_ChoicesFromEvent[i].m_Consequences[k].m_ConsequenceText);
-            }
-        }
-
-    }
-
-
     public void SetAllButtonsEnabled(bool bEnabled)
     {
         for (int i = 0; i < m_ChoiceButtons.Length; i++)
@@ -121,10 +96,11 @@ public class GameManager : MonoBehaviour
         m_CurrentEvent = aEvent;
 
         SetAllButtonsEnabled(false);
-        m_DialogueManager.StartDialogue(aEvent.m_EventText);
         m_bIsTextBeingShown = true;
         m_bIsChoiceBeingShown = true;
         m_bIsConsequenceBeingShown = false;
+
+        m_DialogueManager.StartDialogue(aEvent.m_EventText);
         //Create some sort of logic to put in random events into spots that don't have any
 
     }
@@ -183,7 +159,8 @@ public class GameManager : MonoBehaviour
 
         if (m_bIsConsequenceBeingShown)
         {
-
+            SetUpTurn(m_EventList[Random.Range(0, m_EventList.Count)]);
+            return;
         }
 
         if (m_bIsChoiceBeingShown)

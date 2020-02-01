@@ -618,6 +618,7 @@ MonoBehaviour:
   m_CurrentYear: 0
   m_EventList:
   - {fileID: 11400000, guid: c9e5b30e9d08c4fe3b2527db52d4b3b0, type: 2}
+  - {fileID: 11400000, guid: dd352921d3e9d41e58c62cbc6ec44cdb, type: 2}
   m_CurrentEvent: {fileID: 0}
   m_CurrentGlobalTemperature: 1.15
   m_CurrentPopulation: 7800000000
@@ -632,6 +633,8 @@ MonoBehaviour:
   - {fileID: 1972375796}
   - {fileID: 390110266}
   - {fileID: 963563811}
+  m_bIsChoiceBeingShown: 0
+  m_bIsConsequenceBeingShown: 0
 --- !u!4 &637007935
 Transform:
   m_ObjectHideFlags: 0
