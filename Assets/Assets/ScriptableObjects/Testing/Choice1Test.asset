@@ -11,5 +11,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c7236eb45c0e48d0b4384a9c4256661, type: 3}
   m_Name: Choice1Test
   m_EditorClassIdentifier: 
-  m_ChoiceText: 
-  m_Consequences: []
+  m_ChoiceText:
+  - 
+  m_Consequences:
+  - {fileID: 11400000, guid: c015ad12469304220ad3a62de36408b4, type: 2}
+  - {fileID: 11400000, guid: 02c9b684bfff046fc894cb529692b117, type: 2}

@@ -28,11 +28,16 @@ public class GameManager : MonoBehaviour
     public Text m_TextBoxText;
 
     public List<string> TEST_TEXT = new List<string>();
-    
+
+    public bool m_bIsTextBeingShown = false;
+
+    public Button[] m_ChoiceButtons = new Button[4];
 
     // Use this for initialization
 	void Start ()
     {
+        SetAllButtonsEnabled(false);
+
         m_CurrentYear = INITIAL_YEAR;
         //ProcessEvent();
 
@@ -43,15 +48,16 @@ public class GameManager : MonoBehaviour
             TEST_TEXT.Add("TEST TEXT MESSAGE:  " + i + " - HASH CODE FOR SPACE " + randomTextAmount.GetHashCode().ToString());
         }
 
-        m_DialogueManager.StartDialogue(TEST_TEXT);
 	}
 	
 	// Update is called once per frame
 	void Update ()
     {
-		if (Input.GetKeyUp(KeyCode.Space))
+		if (Input.GetKeyUp(KeyCode.Space) && m_bIsTextBeingShown == true)
         {
             m_DialogueManager.DisplayNextSentence();
+
+
         }
 	}
 
@@ -61,7 +67,7 @@ public class GameManager : MonoBehaviour
         m_CurrentYear += m_TurnCounter;
     }
 
-    public void ProcessEvent()
+    public void ProcessEventTest()
     {
         //Change this to effect the UI later instead of just the debug for now
 
@@ -83,5 +89,38 @@ public class GameManager : MonoBehaviour
             }
         }
 
+    }
+
+
+    public void SetAllButtonsEnabled(bool bEnabled)
+    {
+        for (int i = 0; i < m_ChoiceButtons.Length; i++)
+        {
+            //m_ChoiceButtons[i].enabled = bEnabled;
+            m_ChoiceButtons[i].gameObject.SetActive(bEnabled);
+        }
+    }
+
+    public void EnableAmountOfChoices(int aAmount)
+    {
+        if (aAmount > m_ChoiceButtons.Length)
+        {
+            return;
+        }
+
+        else
+        {
+            SetAllButtonsEnabled(false);
+
+            for (int i = 0; i < aAmount; i++)
+            {
+                m_ChoiceButtons[i].gameObject.SetActive(true);
+            }
+        }
+    }
+
+    public void SetChoices()
+    {
+        
     }
 }

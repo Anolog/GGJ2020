@@ -11,7 +11,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bc96e857194844cda07ab0ef73bc2c7, type: 3}
   m_Name: Consequense2Test
   m_EditorClassIdentifier: 
-  m_ConsequenceText: 
-  m_TempEffect: 0
-  m_PopulationEffect: 0
-  m_HappinessEffect: 0
+  m_ConsequenceText:
+  - 
+  m_TempEffect: 1.3
+  m_PopulationEffect: 1000
+  m_HappinessEffect: 20
