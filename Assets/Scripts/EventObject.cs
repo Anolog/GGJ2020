@@ -12,4 +12,6 @@ public class EventObject : ScriptableObject
 
     public Sprite m_EventImage;
 
+    public bool m_bHasBeenSeen = false;
+
 }

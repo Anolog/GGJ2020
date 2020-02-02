@@ -46,15 +46,26 @@ public class GameManager : MonoBehaviour
     public Sprite m_HappyImage;
     public Sprite m_SadImage;
 
+    public GameObject m_EventImage;
+
     // Use this for initialization
 	void Start ()
     {
         SetAllButtonsEnabled(false);
+        ResetAllObjectsSeen();
 
         m_CurrentYear = INITIAL_YEAR;
 
         SetUpTurn(m_EventList[2]);
 	}
+
+    public void ResetAllObjectsSeen()
+    {
+        for (int i = 0; i < m_EventList.Capacity; i++)
+        {
+            m_EventList[i].m_bHasBeenSeen = false;
+        }
+    }
 	
 	// Update is called once per frame
 	void Update ()
@@ -131,6 +142,15 @@ public class GameManager : MonoBehaviour
         m_bIsChoiceBeingShown = true;
         m_bIsConsequenceBeingShown = false;
 
+        aEvent.m_bHasBeenSeen = true;
+
+        if (aEvent.m_EventImage != null)
+        {
+            m_EventImage.GetComponent<Image>().sprite = aEvent.m_EventImage;
+            m_EventImage.gameObject.SetActive(true);
+        }
+
+
         m_DialogueManager.StartDialogue(aEvent.m_EventText);
         //Create some sort of logic to put in random events into spots that don't have any
 
@@ -155,12 +175,14 @@ public class GameManager : MonoBehaviour
             ProcessConsequence(consequences[0]);
         }
 
+        m_EventImage.SetActive(false);
+        m_EventImage.GetComponent<Image>().sprite = null;
+
     }
 
     public void ProcessConsequence(ConsequenceObject aConsequence)
     {
         SetAllButtonsEnabled(false);
-        //This causes a bug
         m_bIsConsequenceBeingShown = true;
         m_bIsTextBeingShown = true;
         m_DialogueManager.StartDialogue(aConsequence.m_ConsequenceText);
@@ -228,7 +250,26 @@ public class GameManager : MonoBehaviour
 
         if (m_bIsConsequenceBeingShown && m_DialogueManager.m_bHasFinishedText)
         {
-            SetUpTurn(m_EventList[Random.Range(0, m_EventList.Count)]);
+            EventObject eventObj;
+            bool validEvent = false;
+            int counter = 0;
+
+            while (validEvent == false)
+            {
+                eventObj = m_EventList[Random.Range(0, m_EventList.Count)];
+
+                if (eventObj.m_bHasBeenSeen == false)
+                {
+                    validEvent = true;
+                    SetUpTurn(eventObj);
+                }
+                counter++;
+
+                if (counter > m_EventList.Count)
+                {
+                    break;
+                }
+            } 
             return;
         }
 
