@@ -9,8 +9,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4c7236eb45c0e48d0b4384a9c4256661, type: 3}
-  m_Name: Choice_Cirqus
+  m_Name: Choice_Circus
   m_EditorClassIdentifier: 
-  m_ChoiceText: 
-  m_Consequences: []
+  m_ChoiceText: Build a lot of circuses in affected areas - everyone loves a good
+    show with cute animals, right?
+  m_Consequences:
+  - {fileID: 11400000, guid: 62af955c4cd684102b5c6686a84b89b5, type: 2}
+  - {fileID: 11400000, guid: 3f48a031c07324faab9ae3f516318bad, type: 2}
   m_bHasChoiceBeenChosen: 0

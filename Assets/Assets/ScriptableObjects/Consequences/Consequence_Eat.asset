@@ -9,9 +9,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3bc96e857194844cda07ab0ef73bc2c7, type: 3}
-  m_Name: ConsequenceObject
+  m_Name: Consequence_Eat
   m_EditorClassIdentifier: 
-  m_ConsequenceText: []
-  m_TempEffect: 0
-  m_PopulationEffect: 0
-  m_HappinessEffect: 0
+  m_ConsequenceText:
+  - 'Global happiness is growing by 10%.
+
+    Temperature is growing slower this turn (-0.4 degree from standard speed).
+
+    Global population is growing by 1 billion this turn.'
+  - People are growing their own food in the gardens, buy local and try not to waste
+    it.
+  m_TempEffect: -0.4
+  m_PopulationEffect: 1000000000
+  m_HappinessEffect: 10

@@ -11,6 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c7236eb45c0e48d0b4384a9c4256661, type: 3}
   m_Name: Choice_Ban_oil
   m_EditorClassIdentifier: 
-  m_ChoiceText: 
-  m_Consequences: []
+  m_ChoiceText: Ban oil products.
+  m_Consequences:
+  - {fileID: 11400000, guid: 48dd1611877f24a8abbe11838319b15c, type: 2}
   m_bHasChoiceBeenChosen: 0

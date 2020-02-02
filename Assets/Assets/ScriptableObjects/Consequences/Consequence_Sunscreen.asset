@@ -11,7 +11,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bc96e857194844cda07ab0ef73bc2c7, type: 3}
   m_Name: Consequence_Sunscreen
   m_EditorClassIdentifier: 
-  m_ConsequenceText: []
+  m_ConsequenceText:
+  - 'Global happiness is lowered by 10%.
+
+    Global population is lowered by 1 billions. '
+  - People are starving but at least they look good and their chances of getting cancer
+    are a little lower.
   m_TempEffect: 0
-  m_PopulationEffect: 0
-  m_HappinessEffect: 0
+  m_PopulationEffect: -1000000000
+  m_HappinessEffect: -10

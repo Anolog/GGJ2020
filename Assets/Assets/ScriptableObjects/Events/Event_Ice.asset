@@ -11,7 +11,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 259ec83cc5c624e1eb8d6069ce6f855f, type: 3}
   m_Name: Event_Ice
   m_EditorClassIdentifier: 
-  m_ChoicesFromEvent: []
-  m_EventText: []
+  m_ChoicesFromEvent:
+  - {fileID: 11400000, guid: af75dc7d93060440790baae32ab0e145, type: 2}
+  - {fileID: 11400000, guid: da0c9b8f4dfd4442a988be98b4d7f4b8, type: 2}
+  m_EventText:
+  - Ice is melting. Seals, walruses and penguins lose their home. Some of them migrate
+    towards coastal communities to find food - a danger to people living there.
   m_EventImage: {fileID: 0}
   m_bHasBeenSeen: 0

@@ -11,6 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c7236eb45c0e48d0b4384a9c4256661, type: 3}
   m_Name: Choice_Lungs
   m_EditorClassIdentifier: 
-  m_ChoiceText: 
-  m_Consequences: []
+  m_ChoiceText: The Lungs of the Earth - plant more trees in cities and forests.
+  m_Consequences:
+  - {fileID: 11400000, guid: 75e11f7db52404f3f9c48b6edfc6c538, type: 2}
   m_bHasChoiceBeenChosen: 0

@@ -11,7 +11,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 259ec83cc5c624e1eb8d6069ce6f855f, type: 3}
   m_Name: Event_Hot
   m_EditorClassIdentifier: 
-  m_ChoicesFromEvent: []
-  m_EventText: []
+  m_ChoicesFromEvent:
+  - {fileID: 11400000, guid: 20e3a85d3a5de443a9a9bfc93ee66d81, type: 2}
+  - {fileID: 11400000, guid: 5e576ef69e7c645b88c64efc297eb284, type: 2}
+  m_EventText:
+  - "It\u2019s getting hot in here! Droughts are spreading across the continents,
+    there is not enough food or fresh water anymore."
   m_EventImage: {fileID: 0}
   m_bHasBeenSeen: 0

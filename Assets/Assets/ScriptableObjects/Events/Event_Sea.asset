@@ -11,7 +11,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 259ec83cc5c624e1eb8d6069ce6f855f, type: 3}
   m_Name: Event_Sea
   m_EditorClassIdentifier: 
-  m_ChoicesFromEvent: []
-  m_EventText: []
+  m_ChoicesFromEvent:
+  - {fileID: 11400000, guid: eb5205bdb7c204426aeebc55bd3a9834, type: 2}
+  - {fileID: 11400000, guid: b22607833e7b44752bc8f547815060a2, type: 2}
+  m_EventText:
+  - 'Sea-level rises flooding coastal areas, small island nations are wiped off the
+    map. '
   m_EventImage: {fileID: 0}
   m_bHasBeenSeen: 0

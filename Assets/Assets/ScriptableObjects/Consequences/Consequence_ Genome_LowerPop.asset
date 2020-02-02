@@ -13,6 +13,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ConsequenceText:
   - "Global population is lowered by 1 billion. \nGlobal happiness is lowered by 10%."
+  - Experiment went wrong - accidentally created zombies attack people across the
+    world.
   m_TempEffect: 0
   m_PopulationEffect: -1000000000
   m_HappinessEffect: -10

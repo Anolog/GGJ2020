@@ -13,6 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ConsequenceText:
   - Global happiness is growing by 10%
+  - People are happy to learn new ways to live comfortably and still save the planet!
   m_TempEffect: 0
   m_PopulationEffect: 0
   m_HappinessEffect: 10

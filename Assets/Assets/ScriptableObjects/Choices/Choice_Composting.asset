@@ -11,6 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c7236eb45c0e48d0b4384a9c4256661, type: 3}
   m_Name: Choice_Composting
   m_EditorClassIdentifier: 
-  m_ChoiceText: 
-  m_Consequences: []
+  m_ChoiceText: You make composting mandatory across the globe.
+  m_Consequences:
+  - {fileID: 11400000, guid: c329845ded16d4827aff666ca7e80554, type: 2}
   m_bHasChoiceBeenChosen: 0

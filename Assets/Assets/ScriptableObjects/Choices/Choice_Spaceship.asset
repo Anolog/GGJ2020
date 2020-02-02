@@ -11,6 +11,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c7236eb45c0e48d0b4384a9c4256661, type: 3}
   m_Name: Choice_Spaceship
   m_EditorClassIdentifier: 
-  m_ChoiceText: 
-  m_Consequences: []
+  m_ChoiceText: Build a spaceship to leave the planet and find another home for humanity
+    (and yourself of course).
+  m_Consequences:
+  - {fileID: 11400000, guid: 632bf6b35f4204cbea42de324e49ffdc, type: 2}
   m_bHasChoiceBeenChosen: 0

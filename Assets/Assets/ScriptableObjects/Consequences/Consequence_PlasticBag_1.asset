@@ -12,7 +12,11 @@ MonoBehaviour:
   m_Name: Consequence_PlasticBag_1
   m_EditorClassIdentifier: 
   m_ConsequenceText:
-  - Temperature is growing slower this turn (-0.4 degree from standard speed).
+  - 'Temperature is growing slower this turn (-0.4 degree from standard speed).
+
+    Global happiness is lowered by 1 level.'
+  - "People are not prepared for the sudden ban of plastic bags and don\u2019t have
+    reusable ones, they have to carry their purchases in hands."
   m_TempEffect: -0.4
   m_PopulationEffect: 0
   m_HappinessEffect: -10

@@ -11,7 +11,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 259ec83cc5c624e1eb8d6069ce6f855f, type: 3}
   m_Name: Event_Last_chance
   m_EditorClassIdentifier: 
-  m_ChoicesFromEvent: []
-  m_EventText: []
+  m_ChoicesFromEvent:
+  - {fileID: 11400000, guid: 3bff20fb066b74b8eac8dd2091a7f1a2, type: 2}
+  - {fileID: 11400000, guid: 9f397104732c7479da57240248b841c6, type: 2}
+  m_EventText:
+  - "The temperature is rising pretty quick but there\u2019s still time to do something
+    about it!"
   m_EventImage: {fileID: 0}
-  m_bHasBeenSeen: 0
+  m_bHasBeenSeen: 1

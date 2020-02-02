@@ -11,6 +11,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c7236eb45c0e48d0b4384a9c4256661, type: 3}
   m_Name: Choice_Trust
   m_EditorClassIdentifier: 
-  m_ChoiceText: 
-  m_Consequences: []
+  m_ChoiceText: "Are we even sure we can trust these scientists? Let\u2019s sue them
+    for spreading panic!"
+  m_Consequences:
+  - {fileID: 11400000, guid: c96cd8f7f3fff40bf901f70c05c5efaa, type: 2}
   m_bHasChoiceBeenChosen: 0

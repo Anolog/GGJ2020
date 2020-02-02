@@ -11,6 +11,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c7236eb45c0e48d0b4384a9c4256661, type: 3}
   m_Name: Choice_Transition
   m_EditorClassIdentifier: 
-  m_ChoiceText: 
-  m_Consequences: []
+  m_ChoiceText: Start transition from oil, gas and coal power plants to renewable
+    energy.
+  m_Consequences:
+  - {fileID: 11400000, guid: 1d3784b4a31e242368af49346f3d9553, type: 2}
   m_bHasChoiceBeenChosen: 0

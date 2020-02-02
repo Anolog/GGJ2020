@@ -11,6 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c7236eb45c0e48d0b4384a9c4256661, type: 3}
   m_Name: Choice_Corals
   m_EditorClassIdentifier: 
-  m_ChoiceText: 
-  m_Consequences: []
+  m_ChoiceText: "That\u2019s a nice time to sell your coral jewellery!"
+  m_Consequences:
+  - {fileID: 11400000, guid: 7f100f3a03ced4756a29745896d30838, type: 2}
   m_bHasChoiceBeenChosen: 0

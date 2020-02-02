@@ -11,7 +11,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bc96e857194844cda07ab0ef73bc2c7, type: 3}
   m_Name: Consequence_Leave_cities
   m_EditorClassIdentifier: 
-  m_ConsequenceText: []
+  m_ConsequenceText:
+  - Global happiness is lowered by 10%.
+  - Some people leave for small cities and villages and some stay, but all of them
+    are angry about government not doing anything about the situation.
   m_TempEffect: 0
   m_PopulationEffect: 0
-  m_HappinessEffect: 0
+  m_HappinessEffect: -10

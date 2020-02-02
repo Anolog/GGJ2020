@@ -11,6 +11,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c7236eb45c0e48d0b4384a9c4256661, type: 3}
   m_Name: Choice_Leave_cities
   m_EditorClassIdentifier: 
-  m_ChoiceText: 
-  m_Consequences: []
+  m_ChoiceText: "Cleaning the air costs too much money - everyone who can\u2019t appreciate
+    all the pluses of big city life can go live in the woods. "
+  m_Consequences:
+  - {fileID: 11400000, guid: 55a9341c9115248958fff2be575c1a4a, type: 2}
   m_bHasChoiceBeenChosen: 0

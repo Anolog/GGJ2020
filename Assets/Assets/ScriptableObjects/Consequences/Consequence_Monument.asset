@@ -11,7 +11,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bc96e857194844cda07ab0ef73bc2c7, type: 3}
   m_Name: Consequence_Monument
   m_EditorClassIdentifier: 
-  m_ConsequenceText: []
+  m_ConsequenceText:
+  - "Global population is lowered by 2 billions. \nGlobal happiness is lowered by
+    20%."
+  - People are pissed that nothing is done to prevent the tragedy in the future.
   m_TempEffect: 0
-  m_PopulationEffect: 0
-  m_HappinessEffect: 0
+  m_PopulationEffect: -2000000000
+  m_HappinessEffect: -20

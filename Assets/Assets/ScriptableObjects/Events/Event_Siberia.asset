@@ -9,9 +9,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 259ec83cc5c624e1eb8d6069ce6f855f, type: 3}
-  m_Name: EventSyberia
+  m_Name: Event_Siberia
   m_EditorClassIdentifier: 
-  m_ChoicesFromEvent: []
-  m_EventText: []
+  m_ChoicesFromEvent:
+  - {fileID: 11400000, guid: cfcf601560e1b43e28550479a42fa4a6, type: 2}
+  - {fileID: 11400000, guid: d37bfeaad5689436086a997ea47ef295, type: 2}
+  m_EventText:
+  - "Siberia is on fire - animals and people need your help. The President says that
+    it\u2019s not true but the smoke tells otherwise."
   m_EventImage: {fileID: 0}
   m_bHasBeenSeen: 0

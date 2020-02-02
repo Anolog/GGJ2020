@@ -11,7 +11,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bc96e857194844cda07ab0ef73bc2c7, type: 3}
   m_Name: Consequence_Transition
   m_EditorClassIdentifier: 
-  m_ConsequenceText: []
-  m_TempEffect: 0
+  m_ConsequenceText:
+  - Temperature is growing slower this turn (-0.4 degree from standard speed).
+  - 'Renewable energy helps people sustain a comfortable way of living without harming
+    the planet! '
+  m_TempEffect: -0.4
   m_PopulationEffect: 0
   m_HappinessEffect: 0

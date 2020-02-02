@@ -11,6 +11,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c7236eb45c0e48d0b4384a9c4256661, type: 3}
   m_Name: Choice_Sunscreen
   m_EditorClassIdentifier: 
-  m_ChoiceText: 
-  m_Consequences: []
+  m_ChoiceText: Provide people with sunscreens - perfect weather to get some nice
+    tan!
+  m_Consequences:
+  - {fileID: 11400000, guid: de1ab561c9cf84b879358618e9c47d6f, type: 2}
   m_bHasChoiceBeenChosen: 0

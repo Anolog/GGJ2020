@@ -11,7 +11,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bc96e857194844cda07ab0ef73bc2c7, type: 3}
   m_Name: Consequence_Areas
   m_EditorClassIdentifier: 
-  m_ConsequenceText: []
+  m_ConsequenceText:
+  - Global happiness is growing by 1 level.
+  - People of Earth are happy to know that all cute and unique animals are not at
+    the edge of extinction anymore.
   m_TempEffect: 0
   m_PopulationEffect: 0
-  m_HappinessEffect: 0
+  m_HappinessEffect: 10

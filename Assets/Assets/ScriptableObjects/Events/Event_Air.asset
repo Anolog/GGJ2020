@@ -9,9 +9,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 259ec83cc5c624e1eb8d6069ce6f855f, type: 3}
-  m_Name: EventObject
+  m_Name: Event_Air
   m_EditorClassIdentifier: 
-  m_ChoicesFromEvent: []
-  m_EventText: []
+  m_ChoicesFromEvent:
+  - {fileID: 11400000, guid: 240266cd27b064c42b53b4f4bfd950a6, type: 2}
+  - {fileID: 11400000, guid: aa6f2b24d867249b6b6c754e3b533780, type: 2}
+  - {fileID: 11400000, guid: 6a87fc56d37574d6eadde9ab6f6a0435, type: 2}
+  - {fileID: 11400000, guid: 1fb3ca7c3782e4583bb16cfbdef9c4fa, type: 2}
+  m_EventText:
+  - The air in big cities is badly polluted due to all the factories, power plants
+    and cars. You can see people wearing respirators on streets.
   m_EventImage: {fileID: 0}
   m_bHasBeenSeen: 0

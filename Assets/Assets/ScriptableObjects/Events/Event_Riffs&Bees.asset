@@ -11,7 +11,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 259ec83cc5c624e1eb8d6069ce6f855f, type: 3}
   m_Name: Event_Riffs&Bees
   m_EditorClassIdentifier: 
-  m_ChoicesFromEvent: []
-  m_EventText: []
+  m_ChoicesFromEvent:
+  - {fileID: 11400000, guid: af75dc7d93060440790baae32ab0e145, type: 2}
+  - {fileID: 11400000, guid: c014645687bd04a4c9a899430dac4f13, type: 2}
+  - {fileID: 11400000, guid: a9bedf56f7bd64371ab3fe7b064a304f, type: 2}
+  - {fileID: 11400000, guid: 24257fbc0cfdc452baaa3e7d9bb49df5, type: 2}
+  m_EventText:
+  - "99% of coral reefs is lost with all it\u2019s biodiversity (the source of food
+    for a lot of people). "
+  - '99% of insects, vital for pollination of crops and plants are lost - there is
+    not enough food in the world. '
   m_EventImage: {fileID: 0}
-  m_bHasBeenSeen: 0
+  m_bHasBeenSeen: 1
