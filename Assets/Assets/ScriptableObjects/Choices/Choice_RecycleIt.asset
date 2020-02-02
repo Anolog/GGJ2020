@@ -9,9 +9,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4c7236eb45c0e48d0b4384a9c4256661, type: 3}
-  m_Name: Choice_BanPlasticBag
+  m_Name: Choice_RecycleIt
   m_EditorClassIdentifier: 
-  m_ChoiceText: Ban plastic bags and plastic dishes.
+  m_ChoiceText: Recycle it! Build waste recycling plants across the globe oblige people
+    to sort their garbage.
   m_Consequences:
   - {fileID: 11400000, guid: c68db980b398b4a87bd91de79d89de1c, type: 2}
   m_bHasChoiceBeenChosen: 0

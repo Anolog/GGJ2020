@@ -9,10 +9,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3bc96e857194844cda07ab0ef73bc2c7, type: 3}
-  m_Name: Consequence_PlasticBag_1
+  m_Name: Consequence_ Genome_LowerPop
   m_EditorClassIdentifier: 
   m_ConsequenceText:
-  - Temperature is growing slower this turn (-0.4 degree from standard speed).
-  m_TempEffect: -0.4
-  m_PopulationEffect: 0
+  - "Global population is lowered by 1 billion. \nGlobal happiness is lowered by 10%."
+  m_TempEffect: 0
+  m_PopulationEffect: -1000000000
   m_HappinessEffect: -10

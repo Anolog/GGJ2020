@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 259ec83cc5c624e1eb8d6069ce6f855f, type: 3}
+  m_Name: Event_WasteDepo
+  m_EditorClassIdentifier: 
+  m_ChoicesFromEvent:
+  - {fileID: 11400000, guid: 5418c2248a3894054bb7c5d13f4ca873, type: 2}
+  - {fileID: 11400000, guid: 0fd126a29e35c41c9b372e48812287bb, type: 2}
+  - {fileID: 11400000, guid: 4f1814717c7ff4dc5b0948bd41af34de, type: 2}
+  - {fileID: 11400000, guid: c5fb367c3c957422ca3bf7a1eeb8c239, type: 2}
+  m_EventText:
+  - Waste deposits are getting too big and toxic - they pollute the air and the ground,
+    people who live around them are getting sick.
+  m_EventImage: {fileID: 0}
+  m_bHasBeenSeen: 0
