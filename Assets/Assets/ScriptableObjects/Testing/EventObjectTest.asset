@@ -19,3 +19,4 @@ MonoBehaviour:
   - This is test event 2, this is also another paragraph that will show some text
     to the user.
   m_EventImage: {fileID: 0}
+  m_bHasBeenSeen: 0

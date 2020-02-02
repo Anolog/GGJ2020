@@ -17,4 +17,5 @@ MonoBehaviour:
   m_EventText:
   - Australia is on fire. Everything is burning and the Australian Prime Minister
     is doing nothing about it!
-  m_EventImage: {fileID: 0}
+  m_EventImage: {fileID: 21300000, guid: 420885b5654214a419dcdf8576d96706, type: 3}
+  m_bHasBeenSeen: 1

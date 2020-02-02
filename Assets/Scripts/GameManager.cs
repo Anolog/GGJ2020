@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -14,7 +15,7 @@ public class GameManager : MonoBehaviour
     public List<EventObject> m_EventList = new List<EventObject>();
     public EventObject m_CurrentEvent;
 
-    public float m_CurrentGlobalTemperature = 1.15f;
+    public float m_CurrentGlobalTemperature = 4.9f;
     public long m_CurrentPopulation = 7800000000;
     public int m_CurrentHappiness = 50;
 
@@ -245,7 +246,7 @@ public class GameManager : MonoBehaviour
 
         if (m_bGameEnded == true)
         {
-            //Navigate to main menu
+            SceneManager.LoadScene("MainMenuScene");
         }
 
         if (m_bIsConsequenceBeingShown && m_DialogueManager.m_bHasFinishedText)

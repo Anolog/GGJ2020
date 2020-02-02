@@ -19,3 +19,4 @@ MonoBehaviour:
   m_EventText:
   - This is the event test 2 text. First paraghaph but it only has one paragraph.
   m_EventImage: {fileID: 0}
+  m_bHasBeenSeen: 0
