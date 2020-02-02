@@ -17,6 +17,6 @@ MonoBehaviour:
   - With the fire put out, less carbon it put into the atmosphere, slowing the temperature
     increase.
   - Worldwide, people are happy that you made a decision to save Australia from burning.
-  m_TempEffect: 0.2
+  m_TempEffect: -0.2
   m_PopulationEffect: 0
   m_HappinessEffect: 15

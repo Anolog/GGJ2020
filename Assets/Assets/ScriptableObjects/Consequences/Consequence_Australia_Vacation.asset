@@ -16,6 +16,6 @@ MonoBehaviour:
     You also turned your phone off so you can really enjoy yourself!
   - Everyone around the world is angry at you. But it doesn't matter, right? As long
     as you're able to suntan while sipping a cocktail!
-  m_TempEffect: -0.5
+  m_TempEffect: 0.5
   m_PopulationEffect: 0
   m_HappinessEffect: -10
