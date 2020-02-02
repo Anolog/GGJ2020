@@ -42,6 +42,10 @@ public class GameManager : MonoBehaviour
 
     public TopDisplayUIManager m_TopUIManager;
 
+    public GameObject m_HappinessImage;
+    public Sprite m_HappyImage;
+    public Sprite m_SadImage;
+
     // Use this for initialization
 	void Start ()
     {
@@ -49,13 +53,13 @@ public class GameManager : MonoBehaviour
 
         m_CurrentYear = INITIAL_YEAR;
 
-        SetUpTurn(m_EventList[0]);
+        SetUpTurn(m_EventList[2]);
 	}
 	
 	// Update is called once per frame
 	void Update ()
     {
-		if ((Input.GetKeyUp(KeyCode.Space) || Input.GetMouseButtonUp(0))&& m_bIsTextBeingShown == true)
+		if ((Input.GetKeyUp(KeyCode.Space)) && m_bIsTextBeingShown == true)
         {
             m_DialogueManager.DisplayNextSentence();
         }
@@ -67,6 +71,15 @@ public class GameManager : MonoBehaviour
         m_TopUIManager.UpdatePopulationText(m_CurrentPopulation);
         m_TopUIManager.UpdateTemperatureText(m_CurrentGlobalTemperature);
         m_TopUIManager.UpdateYearText(m_CurrentYear);
+
+        if (m_CurrentHappiness >= 50)
+        {
+            m_HappinessImage.GetComponent<Image>().sprite = m_HappyImage;
+        }
+        else if (m_CurrentHappiness < 50)
+        {
+            m_HappinessImage.GetComponent<Image>().sprite = m_SadImage;
+        }
     }
 
     public void IncreaseCurrentYear()
@@ -129,17 +142,25 @@ public class GameManager : MonoBehaviour
 
         List<ConsequenceObject> consequences = m_CurrentEvent.m_ChoicesFromEvent[aButtonID].m_Consequences;
 
-        int randomConsequence = Random.Range(0, consequences.Count);
+        if (consequences.Count > 1)
+        {
+            int randomConsequence = Random.Range(0, consequences.Count);
 
-        ConsequenceObject consequence = consequences[randomConsequence];
+            ConsequenceObject consequence = consequences[randomConsequence];
 
-        ProcessConsequence(consequence);
+            ProcessConsequence(consequence);
+        }
+        else
+        {
+            ProcessConsequence(consequences[0]);
+        }
 
     }
 
     public void ProcessConsequence(ConsequenceObject aConsequence)
     {
         SetAllButtonsEnabled(false);
+        //This causes a bug
         m_bIsConsequenceBeingShown = true;
         m_bIsTextBeingShown = true;
         m_DialogueManager.StartDialogue(aConsequence.m_ConsequenceText);
@@ -186,6 +207,8 @@ public class GameManager : MonoBehaviour
             List<string> loseText = new List<string>();
             loseText.Add("You have lost.");
             loseText.Add("The global population is unhappy with you and has kicked you out of office from decision making.");
+
+            PlayerFailed(loseText);
         }
 
         if (m_CurrentHappiness >= 100)
@@ -203,7 +226,7 @@ public class GameManager : MonoBehaviour
             //Navigate to main menu
         }
 
-        if (m_bIsConsequenceBeingShown)
+        if (m_bIsConsequenceBeingShown && m_DialogueManager.m_bHasFinishedText)
         {
             SetUpTurn(m_EventList[Random.Range(0, m_EventList.Count)]);
             return;

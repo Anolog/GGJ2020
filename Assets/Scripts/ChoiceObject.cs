@@ -9,4 +9,6 @@ public class ChoiceObject : ScriptableObject
     public string m_ChoiceText;
 
     public List<ConsequenceObject> m_Consequences;
+
+    public bool m_bHasChoiceBeenChosen = false;
 }

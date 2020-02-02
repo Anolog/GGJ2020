@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bc96e857194844cda07ab0ef73bc2c7, type: 3}
+  m_Name: Consequence_Australia_Good
+  m_EditorClassIdentifier: 
+  m_ConsequenceText:
+  - You call a global emergency. Firefighters all across the world are coming together
+    to fight off these wildfires!
+  - With the fire put out, less carbon it put into the atmosphere, slowing the temperature
+    increase.
+  - Worldwide, people are happy that you made a decision to save Australia from burning.
+  m_TempEffect: 0.2
+  m_PopulationEffect: 0
+  m_HappinessEffect: 15

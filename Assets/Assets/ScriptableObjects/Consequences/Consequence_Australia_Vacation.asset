@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bc96e857194844cda07ab0ef73bc2c7, type: 3}
+  m_Name: Consequence_Australia_Vacation
+  m_EditorClassIdentifier: 
+  m_ConsequenceText:
+  - You decided to join the Australian Prime Minister and take a vacation in Hawaii.
+    You also turned your phone off so you can really enjoy yourself!
+  - Everyone around the world is angry at you. But it doesn't matter, right? As long
+    as you're able to suntan while sipping a cocktail!
+  m_TempEffect: -0.5
+  m_PopulationEffect: 0
+  m_HappinessEffect: -10

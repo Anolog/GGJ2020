@@ -10,6 +10,7 @@ public class DIalogueManager : MonoBehaviour
     public Queue<string> m_SentenceQueue;
 
     public Text m_Dialogue;
+    public bool m_bHasFinishedText = false;
 
 	// Use this for initialization
 	void Start ()
@@ -26,6 +27,8 @@ public class DIalogueManager : MonoBehaviour
 
         m_SentenceQueue.Clear();
 
+        m_bHasFinishedText = false;
+
         foreach (string sentence in aDialogue)
         {
             m_SentenceQueue.Enqueue(sentence);
@@ -38,6 +41,7 @@ public class DIalogueManager : MonoBehaviour
     {
         if (m_SentenceQueue.Count == 0)
         {
+            m_bHasFinishedText = true;
             EndDialogue();
             return;
         }

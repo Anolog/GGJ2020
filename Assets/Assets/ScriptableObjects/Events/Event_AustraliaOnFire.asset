@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 259ec83cc5c624e1eb8d6069ce6f855f, type: 3}
+  m_Name: Event_AustraliaOnFire
+  m_EditorClassIdentifier: 
+  m_ChoicesFromEvent:
+  - {fileID: 11400000, guid: 040547c82fcd3485fa592d1e2c9895d9, type: 2}
+  - {fileID: 11400000, guid: cfcf601560e1b43e28550479a42fa4a6, type: 2}
+  m_EventText:
+  - Australia is on fire. Everything is burning and the Australian Prime Minister
+    is doing nothing about it!
+  m_EventImage: {fileID: 0}
