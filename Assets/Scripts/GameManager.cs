@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
 
     public int m_CurrentYear = 0;
     const int INITIAL_YEAR = 2019;
-    const int FINAL_YEAR = 2030;
+    const int FINAL_YEAR = 2028;
 
     public List<EventObject> m_EventList = new List<EventObject>();
     public EventObject m_CurrentEvent;
@@ -130,9 +130,9 @@ public class GameManager : MonoBehaviour
     {
         IncreaseCurrentYear();
 
-        if (m_CurrentYear > FINAL_YEAR)
+        if (m_CurrentYear >= FINAL_YEAR)
         {
-            PlayerWinned("Congradulations, you have made it to the year 2030!");
+            PlayerWinned("Congradulations, you have made it to the year " + FINAL_YEAR + "!");
             return;
         }
 
